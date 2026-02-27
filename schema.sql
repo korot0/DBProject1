@@ -1,8 +1,8 @@
 CREATE TABLE TRAIN (
   train_number INT PRIMARY KEY,
   train_name TEXT UNIQUE,
-  premium_fair INT,
-  general_fair INT,
+  premium_fare INT,
+  general_fare INT,
   source_station TEXT,
   destination_station TEXT,
   weekdays TEXT

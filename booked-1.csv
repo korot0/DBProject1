@@ -1,4 +1,4 @@
-﻿Passanger_ssn,Train_Number,Ticket_Type,Staus
+﻿Passenger_ssn,Train_Number,Ticket_Type,Status
 284965676,2,Premium,Booked
 317434088,2,Premium,Booked
 240471168,2,General,Booked
@@ -23,5 +23,3 @@
 987654321,4,General,Booked
 345986511,4,Premium,WaitL
 565110925,4,Premium,WaitL
-667025599,4,General,WaitL
-343114946,4,General,WaitL

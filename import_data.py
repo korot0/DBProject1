@@ -5,15 +5,15 @@ con = sqlite3.connect("railway.db")
 cur = con.cursor()
 
 with open("Train.csv", "r") as file:
-    reader = csv.DictReader(file, skipinitialspace=True)
+    reader = csv.DictReader(file)
     for row in reader:
         cur.execute("INSERT INTO train VALUES (?, ?, ?, ?, ?, ?, ?)",
-            (row["trainnumber"], row["trainname"], row["premiumfair"],
-             row["generalfair"], row["sourcestation"], row["destinationstation"],
-             row["weekdays"]))
+            (row["TrainNumber"], row["TrainName"], row["PremiumFare"],
+             row["GeneralFare"], row["SourceStation"], row["DestinationStation"],
+             row["Weekdays"]))
 
 with open("Train_status.csv", "r") as file:
-    reader = csv.DictReader(file, skipinitialspace=True)
+    reader = csv.DictReader(file)
     for row in reader:
         cur.execute("INSERT INTO train_status VALUES (?, ?, ?, ?, ?, ?)",
             (row["TrainDate"], row["TrainName"], row["PremiumSeatsAvailable"],
@@ -21,7 +21,7 @@ with open("Train_status.csv", "r") as file:
              row["GenSeatsOccupied"]))
 
 with open("Passenger-1.csv", "r", encoding="utf-8-sig") as file:
-    reader = csv.DictReader(file, skipinitialspace=True)
+    reader = csv.DictReader(file)
     for row in reader:
         cur.execute("INSERT INTO passenger VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             (row["first_name"], row["last_name"], row["address"],
@@ -29,11 +29,11 @@ with open("Passenger-1.csv", "r", encoding="utf-8-sig") as file:
              row["SSN"], row["bdate"]))
 
 with open("booked-1.csv", "r", encoding="utf-8-sig") as file:
-    reader = csv.DictReader(file, skipinitialspace=True)
+    reader = csv.DictReader(file)
     for row in reader:
         cur.execute("INSERT INTO booked VALUES (?, ?, ?, ?)",
-            (row["Passanger_ssn"], row["Train_Number"],
-             row["Ticket_Type"], row["Staus"]))
+            (row["Passenger_ssn"], row["Train_Number"],
+             row["Ticket_Type"], row["Status"]))
 
 con.commit()
 con.close()
