@@ -1,6 +1,6 @@
 trainnumber, trainname,premiumfair, generalfair, sourcestation, destinationstation, weekdays,
-1, orient express ,800,600, paris, istanbul,(monday, tuesday, wednesday, thursday, friday)
-2, flying scotsman,4000,3500, edinburgh, london, (friday, saturday, sunday),
-3, golden arrow ,980,860, victoria, dover, (monday, tuesday, wednesday),
-4, golden chariot,4300,3800, bangalore, goa, (saturday, sunday),
-5, maharaja express,5980,4510, delhi, mumbai, (wednesday, thursday, friday),
+1, orient express ,800,600, paris, istanbul,"(monday, tuesday, wednesday, thursday, friday)"
+2, flying scotsman,4000,3500, edinburgh, london,"(friday, saturday, sunday)"
+3, golden arrow ,980,860, victoria, dover,"(monday, tuesday, wednesday)"
+4, golden chariot,4300,3800, bangalore, goa,"(saturday, sunday)"
+5, maharaja express,5980,4510, delhi, mumbai,"(wednesday, thursday, friday)"

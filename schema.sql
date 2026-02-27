@@ -1,4 +1,4 @@
-CREATE TABLE train (
+CREATE TABLE TRAIN (
   train_number INT PRIMARY KEY,
   train_name TEXT,
   premium_fair INT,
@@ -8,7 +8,7 @@ CREATE TABLE train (
   weekdays TEXT
 );
 
-CREATE TABLE train_status (
+CREATE TABLE TRAIN_STATUS (
   train_date TEXT,
   train_name TEXT,
   premium_seats_available INT,
@@ -19,7 +19,7 @@ CREATE TABLE train_status (
   FOREIGN KEY (train_name) REFERENCES train(train_name)
 );
 
-CREATE TABLE passenger (
+CREATE TABLE PASSENGER (
   first_name TEXT,
   last_name TEXT,
   address TEXT,
@@ -31,7 +31,7 @@ CREATE TABLE passenger (
 );
 
 
-CREATE TABLE booked (
+CREATE TABLE BOOKED (
   passenger_ssn INT,
   train_number INT,
   ticket_type TEXT,
