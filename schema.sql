@@ -27,7 +27,7 @@ CREATE TABLE PASSENGER (
   county TEXT,
   phone TEXT,
   ssn INT PRIMARY KEY,
-  bdate TEXT
+  bdate DATE
 );
 
 CREATE TABLE BOOKED (
