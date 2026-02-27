@@ -1,6 +1,6 @@
 CREATE TABLE TRAIN (
   train_number INT PRIMARY KEY,
-  train_name TEXT,
+  train_name TEXT UNIQUE,
   premium_fair INT,
   general_fair INT,
   source_station TEXT,
@@ -29,7 +29,6 @@ CREATE TABLE PASSENGER (
   ssn INT PRIMARY KEY,
   bdate TEXT
 );
-
 
 CREATE TABLE BOOKED (
   passenger_ssn INT,

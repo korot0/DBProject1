@@ -22,7 +22,6 @@ with open("Train_status.csv", "r") as file:
 
 with open("Passenger-1.csv", "r", encoding="utf-8-sig") as file:
     reader = csv.DictReader(file, skipinitialspace=True)
-    print(reader.fieldnames)
     for row in reader:
         cur.execute("INSERT INTO passenger VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             (row["first_name"], row["last_name"], row["address"],
@@ -31,7 +30,6 @@ with open("Passenger-1.csv", "r", encoding="utf-8-sig") as file:
 
 with open("booked-1.csv", "r", encoding="utf-8-sig") as file:
     reader = csv.DictReader(file, skipinitialspace=True)
-    print(reader.fieldnames)
     for row in reader:
         cur.execute("INSERT INTO booked VALUES (?, ?, ?, ?)",
             (row["Passanger_ssn"], row["Train_Number"],
